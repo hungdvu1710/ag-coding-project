@@ -1,12 +1,24 @@
-import React from 'react'
-import {View, Text} from 'react-native'
+import React from "react";
+import { View, Text, ScrollView, SafeAreaView } from "react-native";
+import { COLORS } from "../constants";
+import { Stack, useRouter } from "expo-router";
+import { Home } from "../components";
 
-const Home = () => {
+const LandingPage = () => {
+  const router = useRouter();
+
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
-  )
-}
+    <SafeAreaView  style={{ flex: 1, backgroundColor: COLORS.background }} >
+      <Stack.Screen
+        options={{
+          headerStyle: { backgroundColor: COLORS.background },
+          headerShadowVisible: false,
+          headerTitle: "",
+        }}
+      />
+      <Home />
+    </SafeAreaView>
+  );
+};
 
-export default Home
+export default LandingPage;
