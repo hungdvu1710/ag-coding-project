@@ -1,7 +1,12 @@
-import {Stack} from "expo-router";
+import { Stack } from "expo-router";
+import { GlobalContextProvider } from "../Context/store";
 
 const Layout = () => {
-  return <Stack />
-}
+  return (
+    <GlobalContextProvider>
+      <Stack />
+    </GlobalContextProvider>
+  );
+};
 
 export default Layout;
