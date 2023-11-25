@@ -1,8 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { useGlobalContext } from "../../Context/store";
-import InfoBar from "../shared/InfoBar";
-import AvatarDisplay from "../shared/AvatarDisplay";
+import { InfoBar, AvatarDisplay } from "../index";
 import { COLORS } from "../../constants";
 
 const Home = () => {
@@ -10,10 +9,10 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <AvatarDisplay />
-      <InfoBar title="Name" data="My Name" />
-      <InfoBar title="Phone" data="My Phone" />
-      <InfoBar title="Email" data="My Email" />
-      <InfoBar title="Tell us about yourself" data="My Bio" />
+      <InfoBar title="Name" data="My Name" slug="name" />
+      <InfoBar title="Phone" data="My Phone" slug="phone" />
+      <InfoBar title="Email" data="My Email" slug="email" />
+      <InfoBar title="Tell us about yourself" data="My Bio" slug="bio" />
     </View>
   );
 };

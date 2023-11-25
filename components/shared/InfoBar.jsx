@@ -4,10 +4,10 @@ import { COLORS } from "../../constants";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useRouter } from "expo-router";
 
-const InfoBar = ({ title, data }) => {
+const InfoBar = ({ title, data, slug }) => {
   const router = useRouter();
   const handlePress = () => {
-    router.push(`/edit/${title.toLowerCase()}`);
+    router.push(`/edit/${slug}`);
   };
 
   return (
