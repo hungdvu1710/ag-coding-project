@@ -32,16 +32,18 @@ const styles = StyleSheet.create({
     width: "85%",
     borderBottomColor: COLORS.secondary,
     borderBottomWidth: 1,
-    paddingBottom: 5,
-    marginBottom: 5,
+    paddingBottom: 3,
+    marginBottom: 3,
   },
   title: {
     color: COLORS.secondary,
+    fontWeight: "500",
   },
   data: {
     color: COLORS.primary,
-    marginBottom: 10,
-    marginTop: 5,
+    marginBottom: 8,
+    marginTop: 3,
+    fontWeight: "600",
   },
   button: {
     width: "100%",

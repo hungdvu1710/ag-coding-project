@@ -15,7 +15,7 @@ const UpdateButton = ({ handlePress }) => {
 const styles = StyleSheet.create({
   container: {
     position: "absolute",
-    top: "55%",
+    top: "60%",
     width: "85%",
   },
   buttonWrapper: {

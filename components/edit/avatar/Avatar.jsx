@@ -18,7 +18,6 @@ const Avatar = () => {
     });
 
     if (!result.canceled) {
-      console.log(result);
       setSelectedImage(result.assets[0].uri);
     } else {
       alert("You did not select any image.");
@@ -36,14 +35,13 @@ const Avatar = () => {
           <View style={styles.icon}>
             <FontAwesome
               name="user"
-              size={300}
+              size={250}
               color="white"
             />
           </View>
         ) : (
           <Image source={{ uri: selectedImage }} style={styles.image} />
         )}
-        {/* <Image source={imageSource} style={styles.image} /> */}
       </Pressable>
       <UpdateButton handlePress={handlePress}/>
     </View>
@@ -52,13 +50,13 @@ const Avatar = () => {
 
 const styles = StyleSheet.create({
   image: {
-    width: 300,
-    height: 300,
+    width: 250,
+    height: 250,
   },
   icon: {
     backgroundColor: "black",
-    width: 300,
-    height: 300,
+    width: 250,
+    height: 250,
     alignItems: "center",
   }
 });

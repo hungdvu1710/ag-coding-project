@@ -22,14 +22,14 @@ const Phone = () => {
         <TextInput
           value={currPhone}
           onChangeText={(text) => {
-            const numericText = text.replace(/[^0-9]/g, '');
+            const numericText = text.replace(/[^0-9+*#]/g, '');
             setCurrPhone(numericText)
           }}
           keyboardType="phone-pad"
           placeholder="Enter your phone number"
           textContentType="telephoneNumber"
           style={sharedStyles.input}
-          maxLength={10}
+          maxLength={15}
         />
       </View>
       <UpdateButton handlePress={handlePress} />
