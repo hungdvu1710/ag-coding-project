@@ -31,7 +31,7 @@ const AvatarDisplay = () => {
           />
         ) : (
           <Avatar
-            size={100}
+            size={120}
             rounded
             source={{ uri: avatar }}
             onPress={handlePress}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput } from "react-native";
 import { useGlobalContext } from "../../../Context/store";
-import { UpdateButton } from "../../shared/UpdateButton";
+import UpdateButton from "../../shared/UpdateButton";
 import { useRouter } from "expo-router";
 import sharedStyles from "../edit.style";
 
@@ -21,11 +21,15 @@ const Phone = () => {
         <Text style={sharedStyles.label}>Your phone number</Text>
         <TextInput
           value={currPhone}
-          onChangeText={(text) => setCurrPhone(text)}
+          onChangeText={(text) => {
+            const numericText = text.replace(/[^0-9]/g, '');
+            setCurrPhone(numericText)
+          }}
           keyboardType="phone-pad"
           placeholder="Enter your phone number"
           textContentType="telephoneNumber"
           style={sharedStyles.input}
+          maxLength={10}
         />
       </View>
       <UpdateButton handlePress={handlePress} />

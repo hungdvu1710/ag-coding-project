@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, StyleSheet } from "react-native";
 import { useGlobalContext } from "../../../Context/store";
-import { UpdateButton } from "../../shared/UpdateButton";
+import UpdateButton from "../../shared/UpdateButton";
 import { useRouter } from "expo-router";
 import sharedStyles from "../edit.style";
 import { COLORS } from "../../../constants";
