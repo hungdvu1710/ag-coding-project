@@ -5,6 +5,17 @@
       "bundler": "metro"
     },
     "name": "ag-coding-project",
-    "slug": "agcp"
+    "slug": "agcp",
+    "extra": {
+      "eas": {
+        "projectId": "ee131d1c-6313-43e9-8a5d-251ffe4bfb2e"
+      }
+    },
+    "android": {
+      "package": "com.hdvu17.agcp"
+    },
+    "ios": {
+      "bundleIdentifier": "com.hdvu17.agcp"
+    }
   }
 }
