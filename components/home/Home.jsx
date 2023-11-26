@@ -1,18 +1,19 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { useGlobalContext } from "../../Context/store";
-import { InfoBar, AvatarDisplay } from "../index";
+import InfoBar from "../shared/InfoBar";
+import AvatarDisplay from "../shared/AvatarDisplay";
 import { COLORS } from "../../constants";
 
 const Home = () => {
-  const { name, bio, phone, email, avatar } = useGlobalContext();
+  const { firstName, lastName, bio, phone, email, avatar } = useGlobalContext();
   return (
     <View style={styles.container}>
       <AvatarDisplay />
-      <InfoBar title="Name" data="My Name" slug="name" />
-      <InfoBar title="Phone" data="My Phone" slug="phone" />
-      <InfoBar title="Email" data="My Email" slug="email" />
-      <InfoBar title="Tell us about yourself" data="My Bio" slug="bio" />
+      <InfoBar title="Name" data={firstName + " " + lastName} slug="name" />
+      <InfoBar title="Phone" data={phone} slug="phone" />
+      <InfoBar title="Email" data={email} slug="email" />
+      <InfoBar title="Tell us about yourself" data={bio} slug="bio" />
     </View>
   );
 };

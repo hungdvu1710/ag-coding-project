@@ -5,8 +5,10 @@ import {
 } from "react";
 
 const GlobalContext = createContext({
-  name: "",
-  setName: () => {},
+  firstName: "",
+  setFirstName: () => {},
+  lastName: "",
+  setLastName: () => {},
   bio: "",
   setBio: () => {},
   phone: "",
@@ -18,7 +20,8 @@ const GlobalContext = createContext({
 });
 
 export const GlobalContextProvider = ({ children }) => {
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [bio, setBio] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -26,7 +29,7 @@ export const GlobalContextProvider = ({ children }) => {
 
   return (
     <GlobalContext.Provider
-      value={{ name, setName, bio, setBio, phone, setPhone, email, setEmail, avatar, setAvatar }}
+      value={{ firstName, setFirstName, lastName, setLastName, bio, setBio, phone, setPhone, email, setEmail, avatar, setAvatar }}
     >
       {children}
     </GlobalContext.Provider>

@@ -13,9 +13,9 @@ const InfoBar = ({ title, data, slug }) => {
   return (
     <View style={styles.container}>
       <Pressable style={styles.button} onPress={handlePress}>
-        <View>
+        <View style={styles.contentWrapper}>
           <Text style={styles.title}>{title}</Text>
-          <Text style={styles.data}>{data}</Text>
+          <Text style={styles.data} numberOfLines={5}>{data}</Text>
         </View>
         <FontAwesome
           name="angle-right"
@@ -52,6 +52,9 @@ const styles = StyleSheet.create({
   },
   buttonIcon: {
     color: COLORS.secondary,
+  },
+  contentWrapper: {
+    maxWidth: "95%",
   }
 });
 
